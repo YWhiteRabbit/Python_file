@@ -12,10 +12,10 @@ def figure_rectengle(x1, y1, x2, y2):
     side_2 = side(x1, y1, x4, y4)
     perim_rect = perimitre_rectengle(side_1, side_2)
     area_regt = area_regtengle(side_1, side_2)
-    return 'Rectangle Area:{} Perimeter:{}'.format(perim_rect, area_regt)
+    return 'Rectangle Area:{} Perimeter:{}'.format(area_regt, perim_rect)
 
 def figure_square(side_square):
-    return 'Square Area:{} Perimeter:{}'.format(perimetre_squre(side_square), area_square(side_square))
+    return 'Square Area:{} Perimeter:{}'.format(area_square(side_square), perimetre_squre(side_square))
 
 def side(x_1, y_1, x_2, y_2):
     '''знаходимо сторону фігури з двома точками'''
@@ -41,7 +41,7 @@ def figure_triangle(x1, x2, x3, y1, y2, y3):
     side3 = side(x3, y3, x1, y1)
     per_tr = perimetr_triangle(side1, side2, side3)
     area_tr = area_triangle(side1, side2, side3)
-    print('Triangle Area:{} Perimeter:{}'.format(per_tr, area_tr))
+    print('Triangle Area:{} Perimeter:{}'.format(area_tr, per_tr))
 
 def area_triangle(side_1, side_2, side_3):
     p = (side_1+side_2+side_3)/2
@@ -53,7 +53,7 @@ def perimetr_triangle(side_1, side_2, side_3):
 def figure_circle(r):
     area_sircle = math.pi*(r**2)
     perim = 2*math.pi*r
-    print('Circle Area:{} Perimeter:{}'.format(perim, area_sircle))
+    print('Circle Area:{} Perimeter:{}'.format(area_sircle, perim))
 
 #вводиться фігура, розташування, точки
 
