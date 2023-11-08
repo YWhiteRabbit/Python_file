@@ -64,26 +64,36 @@ while True:
     f = input('Enter your figure geometriqe:')
     if f=='square':
         print('Enter: x1 y1 side')
-        x_1, y_1, side_1 = map(int, input('Maintain shape data separated by a space:').split())
-        print(figure_square(side_1))
+        try:
+            x_1, y_1, side_1 = map(int, input('Maintain shape data separated by a space:').split())
+            print(figure_square(side_1))
+        except ValueError:
+            print(' ValueError:not enough values to unpack expected 3')
     elif f=='rectangle':
         print('Enter: x1 y1 x2 y2')
-        x_1, y_1, x_2, y_2 = map(int, input('Maintain shape data separated by a space:').split())
-        print(figure_rectengle(x_1, y_1, x_2, y_2))
+        try:
+            x_1, y_1, x_2, y_2 = map(int, input('Maintain shape data separated by a space:').split())
+            print(figure_rectengle(x_1, y_1, x_2, y_2))
+        except ValueError:
+            print(' ValueError:not enough values to unpack expected 4')
+
     elif f=='circle':
         print('Enter: x1 y1 radius')
-        x_1, y_1, radius = map(int, input('Maintain shape data separated by a space:').split())
-        print(figure_circle(radius))
+        try:
+            x_1, y_1, radius = map(int, input('Maintain shape data separated by a space:').split())
+            print(figure_circle(radius))
+        except ValueError:
+            print(' ValueError:not enough values to unpack expected 3')
+
     elif f=='triangle':
-        print('Enter: x1 x2 x3 y1 y2 y3')
-        x_1, y_1, x_2, y_2, x_3, y_3 = map(int, input('Maintain shape data separated by a space:').split())
-        print(figure_triangle(x_1, x_2, x_3, y_1, y_2, y_3))
+        try:
+            print('Enter: x1 x2 x3 y1 y2 y3')
+            x_1, y_1, x_2, y_2, x_3, y_3 = map(int, input('Maintain shape data separated by a space:').split())
+            print(figure_triangle(x_1, x_2, x_3, y_1, y_2, y_3))
+        except ValueError:
+            print(' ValueError:not enough values to unpack expected 6')
     elif f=='5':
         print('By!')
-        break
-    else:
-        print('NameError: There is no figure with this name. Please enter one of the following names:'
-              'square, rectangle, circle, triangle')
         break
     else:
         print('NameError: There is no figure with this name. Please enter one of the following names:'
