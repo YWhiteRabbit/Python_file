@@ -63,19 +63,27 @@ print('If you want to exit the app, enter the number 5.')
 while True:
     f = input('Enter your figure geometriqe:')
     if f=='square':
-        location, x_1, y_1, side_1 = map(input('Maintain shape data separated by a space:'))
+        print('Enter: x1 y1 side')
+        x_1, y_1, side_1 = map(int, input('Maintain shape data separated by a space:').split())
         print(figure_square(side_1))
     elif f=='rectangle':
-        location1, x_1, y_1, location2, x_2, y_2 = map(input('Maintain shape data separated by a space:'))
+        print('Enter: x1 y1 x2 y2')
+        x_1, y_1, x_2, y_2 = map(int, input('Maintain shape data separated by a space:').split())
         print(figure_rectengle(x_1, y_1, x_2, y_2))
     elif f=='circle':
-        location, x_1, y_1, radius = map(input('Maintain shape data separated by a space:'))
+        print('Enter: x1 y1 radius')
+        x_1, y_1, radius = map(int, input('Maintain shape data separated by a space:').split())
         print(figure_circle(radius))
     elif f=='triangle':
-        p1, x_1, y_1, p_2, x_2, y_2, p3, x_3, y_3 = map((input('Maintain shape data separated by a space:')))
+        print('Enter: x1 x2 x3 y1 y2 y3')
+        x_1, y_1, x_2, y_2, x_3, y_3 = map(int, input('Maintain shape data separated by a space:').split())
         print(figure_triangle(x_1, x_2, x_3, y_1, y_2, y_3))
     elif f=='5':
         print('By!')
+        break
+    else:
+        print('NameError: There is no figure with this name. Please enter one of the following names:'
+              'square, rectangle, circle, triangle')
         break
     else:
         print('NameError: There is no figure with this name. Please enter one of the following names:'
